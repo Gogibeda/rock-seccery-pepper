@@ -14,27 +14,22 @@ namespace rock_seccery_pepper
         {
             int computerScore = 0;
             int playerScore = 0;
-            
 
-            
-            
-            
-            
-                var random = new Random();
-                int computerNumber= random.Next(1,4);
-                string computerMove = computerNumber.ToString();
+            var random = new Random();
+            int computerNumber = random.Next(1, 4);
+            string computerMove = computerNumber.ToString();
 
             while (computerScore != 3 && playerScore != 3)
             {
                 Console.WriteLine("Enter  rock , scissor or pepper ");
                 string playerMove = Console.ReadLine();
-                
+
                 if (playerMove != "rock" && playerMove != "scissor" && playerMove != "pepper")
                 {
                     Console.WriteLine("Wrong input ");
                 }
-                
-                if (playerMove == "rock" && computerNumber == 2 ||  playerMove == "scissor" && computerNumber == 3 || playerMove == "pepper" && computerNumber == 1)
+
+                if (playerMove == "rock" && computerNumber == 2 || playerMove == "scissor" && computerNumber == 3 || playerMove == "pepper" && computerNumber == 1)
                 {
                     Console.WriteLine("Player wins");
                     playerScore++;
@@ -50,12 +45,6 @@ namespace rock_seccery_pepper
                 }
                 Console.WriteLine($"computer's score: {computerScore}");
                 Console.WriteLine($"player's score: {playerScore}");
-
-
-
-
-
-
             }
             Console.WriteLine(playerScore == 3 ? "player wins!" : "Computer wins!");
         }
